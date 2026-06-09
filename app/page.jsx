@@ -73,7 +73,7 @@ function useInView(threshold = 0.15) {
     if (ref.current) obs.observe(ref.current);
     return () => obs.disconnect();
   }, []);
-  return [ref, inView]; as const;
+  return [ref, inView];
 }
 
 function Reveal({ children, delay = 0, style = {} }) {
